@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ka test.yaml
+microk8s kubectl apply -f test.yaml
