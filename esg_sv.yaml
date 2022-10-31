@@ -15,8 +15,7 @@ spec:
     spec: 
       containers:
       - name: getdb
-        image: "desg2022/01getdb:vs02"
-        imagePullPolicy: Always
+        image: "desg2022/01getdb:vs03"
         env:
           - name: "PORT"
             value: "8001"
@@ -61,7 +60,6 @@ spec:
       containers:
       - name: insertdb
         image: "desg2022/03insertdb:vs02"
-        imagePullPolicy: Always
         env:
           - name: "PORT"
             value: "8003"
