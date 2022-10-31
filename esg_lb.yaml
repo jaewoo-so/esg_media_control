@@ -1,0 +1,97 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: getdb-lb
+spec:
+  type: LoadBalancer
+  selector:
+    app: getdb 
+  ports:
+  - protocol: TCP
+    port: 8001 
+    targetPort: 8001
+    nodePort: 30201
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pre1-lb
+spec:
+  type: LoadBalancer
+  selector:
+    app: pre1 
+  ports:
+  - protocol: TCP
+    port: 8002 
+    targetPort: 8002
+    nodePort: 30202
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: insertdb-lb
+spec:
+  type: LoadBalancer
+  selector:
+    app: insertdb 
+  ports:
+  - protocol: TCP
+    port: 8003 
+    targetPort: 8003
+    nodePort: 30203
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mecab-lb
+spec:
+  type: LoadBalancer
+  selector:
+    app: mecab 
+  ports:
+  - protocol: TCP
+    port: 8004 
+    targetPort: 8004
+    nodePort: 30204
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pn-lb
+spec:
+  type: LoadBalancer
+  selector:
+    app: pn 
+  ports:
+  - protocol: TCP
+    port: 8005 
+    targetPort: 8005
+    nodePort: 30205
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cat-lb
+spec:
+  type: LoadBalancer
+  selector:
+    app: cat
+  ports:
+  - protocol: TCP
+    port: 8001 
+    targetPort: 8001
+    nodePort: 30206
+# ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: postnerall-lb
+# spec:
+#   type: LoadBalancer
+#   selector:
+#     app: postnerall
+#   ports:
+#   - protocol: TCP
+#     port: 8010 
+#     targetPort: 8010
+#     nodePort: 30210

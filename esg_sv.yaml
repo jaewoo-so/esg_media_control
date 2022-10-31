@@ -1,0 +1,153 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: getdbdp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: getdb
+  
+  template:
+    metadata:
+      labels:
+        app: getdb
+    spec: 
+      containers:
+      - name: getdb
+        image: "desg2022/01getdb:vs02"
+        imagePullPolicy: Always
+        env:
+          - name: "PORT"
+            value: "8001"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pre1dp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pre1
+  
+  template:
+    metadata:
+      labels:
+        app: pre1
+    spec: 
+      containers:
+      - name: pre1
+        image: "desg2022/02pre1:vs01"
+        env:
+          - name: "PORT"
+            value: "8002"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: insertdbdp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: insertdb
+  
+  template:
+    metadata:
+      labels:
+        app: insertdb
+    spec: 
+      containers:
+      - name: insertdb
+        image: "desg2022/03insertdb:vs02"
+        imagePullPolicy: Always
+        env:
+          - name: "PORT"
+            value: "8003"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mecabdp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mecab
+  
+  template:
+    metadata:
+      labels:
+        app: mecab
+    spec: 
+      containers:
+      - name: mecab
+        image: "desg2022/04mecab:vs02"
+        env:
+          - name: "PORT"
+            value: "8004"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pndp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pn
+  template:
+    metadata:
+      labels:
+        app: pn
+    spec: 
+      containers:
+      - name: pn
+        image: "desg2022/05pn:vs01"
+        env:
+          - name: "PORT"
+            value: "8005"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: catdp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cat
+  template:
+    metadata:
+      labels:
+        app: cat
+    spec:
+      containers:
+      - name: cat
+        image: localhost:32000/06cat:registry
+        env:
+          - name: "PORT"
+            value: "8001"
+# ---
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: postneralldp
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: postnerall
+#   template:
+#     metadata:
+#       labels:
+#         app: postnerall
+#     spec:
+#       containers:
+#       - name: postnerall
+#         image: "desg2022/10postnerall:vs02"
+#         imagePullPolicy: Always
+#         env:
+#           - name: "PORT"
+#             value: "8010"
