@@ -81,17 +81,17 @@ spec:
     port: 8001 
     targetPort: 8001
     nodePort: 30206
-# ---
-# apiVersion: v1
-# kind: Service
-# metadata:
-#   name: postnerall-lb
-# spec:
-#   type: LoadBalancer
-#   selector:
-#     app: postnerall
-#   ports:
-#   - protocol: TCP
-#     port: 8010 
-#     targetPort: 8010
-#     nodePort: 30210
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postnerall-lb
+spec:
+  type: LoadBalancer
+  selector:
+    app: postnerall
+  ports:
+  - protocol: TCP
+    port: 8010 
+    targetPort: 8010
+    nodePort: 30210

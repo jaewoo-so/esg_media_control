@@ -127,25 +127,25 @@ spec:
         env:
           - name: "PORT"
             value: "8001"
-# ---
-# apiVersion: apps/v1
-# kind: Deployment
-# metadata:
-#   name: postneralldp
-# spec:
-#   replicas: 1
-#   selector:
-#     matchLabels:
-#       app: postnerall
-#   template:
-#     metadata:
-#       labels:
-#         app: postnerall
-#     spec:
-#       containers:
-#       - name: postnerall
-#         image: "desg2022/10postnerall:vs02"
-#         imagePullPolicy: Always
-#         env:
-#           - name: "PORT"
-#             value: "8010"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postneralldp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postnerall
+  template:
+    metadata:
+      labels:
+        app: postnerall
+    spec:
+      containers:
+      - name: postnerall
+        image: "desg2022/10postnerall:vs04"
+        imagePullPolicy: Always
+        env:
+          - name: "PORT"
+            value: "8010"
