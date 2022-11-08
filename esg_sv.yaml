@@ -127,6 +127,8 @@ spec:
         env:
           - name: "PORT"
             value: "8001"
+      imagePullSecrets: 
+        - name: docker-registry-login
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -149,3 +151,5 @@ spec:
         env:
           - name: "PORT"
             value: "8010"
+      imagePullSecrets: 
+        - name: docker-registry-login
