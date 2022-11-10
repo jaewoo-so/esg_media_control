@@ -19,6 +19,16 @@ spec:
         env:
           - name: "PORT"
             value: "8001"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8004
+            scheme: HTTP
+          timeoutSeconds: 3
+          successThreshold: 1
+          failureThreshold: 2
+          initialDelaySeconds: 3
+          periodSeconds: 2
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -41,6 +51,16 @@ spec:
         env:
           - name: "PORT"
             value: "8002"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8002
+            scheme: HTTP
+          timeoutSeconds: 3
+          successThreshold: 1
+          failureThreshold: 2
+          initialDelaySeconds: 3
+          periodSeconds: 2
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -144,7 +164,7 @@ spec:
     spec:
       containers:
       - name: postnerall
-        image: localhost:32000/10postnerall:vs04
+        image: localhost:32000/10postnerall:vs05
         imagePullPolicy: Always
         env:
           - name: "PORT"
