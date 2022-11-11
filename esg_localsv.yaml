@@ -165,7 +165,7 @@ spec:
     spec:
       containers:
       - name: postnerall
-        image: localhost:32000/10postnerall:vs06
+        image: localhost:32000/10postnerall:vs05test
         imagePullPolicy: Always
         env:
           - name: "PORT"
