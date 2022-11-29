@@ -14,7 +14,7 @@ spec:
     spec: 
       containers:
       - name: getdb
-        image: "desg2022/01getdb:vs05"
+        image: "localhost:32000/01getdb:vs06"
         imagePullPolicy: Always
         env:
           - name: "PORT"
@@ -70,7 +70,7 @@ spec:
     spec: 
       containers:
       - name: insertdb
-        image: "desg2022/03insertdb:vs02"
+        image: "localhost:32000/03insertdb:vs03"
         env:
           - name: "PORT"
             value: "8003"
@@ -134,7 +134,7 @@ spec:
     spec:
       containers:
       - name: cat
-        image: localhost:32000/07catlocal:vs01
+        image: "localhost:32000/07catlocal:vs01"
         env:
           - name: "PORT"
             value: "8001"
@@ -165,7 +165,7 @@ spec:
     spec:
       containers:
       - name: postnerall
-        image: localhost:32000/10postnerall:vs05test
+        image: "localhost:32000/10postnerall1117:vs02"
         imagePullPolicy: Always
         env:
           - name: "PORT"
