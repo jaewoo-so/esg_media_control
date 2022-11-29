@@ -74,7 +74,7 @@ spec:
       terminationGracePeriodSeconds : 20
       containers:
       - name: insertdb
-        image: "localhost:32000/03insertdb:vs03"
+        image: "localhost:32000/03insertdb:vs04"
         env:
           - name: "PORT"
             value: "8003"
