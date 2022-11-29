@@ -12,7 +12,7 @@ spec:
       labels:
         app: getdb
     spec: 
-      terminationGracePeriodSeconds : 10
+      terminationGracePeriodSeconds : 3
       containers:
       - name: getdb
         image: "localhost:32000/01getdb:vs07"
@@ -47,7 +47,7 @@ spec:
       labels:
         app: pre1
     spec: 
-      terminationGracePeriodSeconds : 10
+      terminationGracePeriodSeconds : 3
       containers:
       - name: pre1
         image: "desg2022/02pre1:vs01"
@@ -71,7 +71,7 @@ spec:
       labels:
         app: insertdb
     spec: 
-      terminationGracePeriodSeconds : 20
+      terminationGracePeriodSeconds : 8
       containers:
       - name: insertdb
         image: "localhost:32000/03insertdb:vs04"
@@ -94,7 +94,7 @@ spec:
       labels:
         app: mecab
     spec: 
-      terminationGracePeriodSeconds : 10
+      terminationGracePeriodSeconds : 3
       containers:
       - name: mecab
         image: "desg2022/04mecab:vs02"
@@ -116,7 +116,7 @@ spec:
       labels:
         app: pn
     spec: 
-      terminationGracePeriodSeconds : 10
+      terminationGracePeriodSeconds : 3
       containers:
       - name: pn
         image: "desg2022/05pn:vs01"
@@ -138,7 +138,7 @@ spec:
       labels:
         app: cat
     spec:
-      terminationGracePeriodSeconds : 10
+      terminationGracePeriodSeconds : 3
       containers:
       - name: cat
         image: "localhost:32000/07catlocal:vs01"
@@ -170,7 +170,7 @@ spec:
       labels:
         app: postnerall
     spec:
-      terminationGracePeriodSeconds : 30
+      terminationGracePeriodSeconds : 10
       containers:
       - name: postnerall
         image: "localhost:32000/10postnerall1117:vs02"
