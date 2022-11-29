@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: getdbdp
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: getdb
@@ -12,6 +12,7 @@ spec:
       labels:
         app: getdb
     spec: 
+      terminationGracePeriodSeconds : 10
       containers:
       - name: getdb
         image: "localhost:32000/01getdb:vs06"
@@ -29,13 +30,14 @@ spec:
           failureThreshold: 2
           initialDelaySeconds: 3
           periodSeconds: 2
+          
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: pre1dp
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: pre1
@@ -45,6 +47,7 @@ spec:
       labels:
         app: pre1
     spec: 
+      terminationGracePeriodSeconds : 10
       containers:
       - name: pre1
         image: "desg2022/02pre1:vs01"
@@ -58,7 +61,7 @@ kind: Deployment
 metadata:
   name: insertdbdp
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: insertdb
@@ -68,6 +71,7 @@ spec:
       labels:
         app: insertdb
     spec: 
+      terminationGracePeriodSeconds : 20
       containers:
       - name: insertdb
         image: "localhost:32000/03insertdb:vs03"
@@ -80,7 +84,7 @@ kind: Deployment
 metadata:
   name: mecabdp
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: mecab
@@ -90,6 +94,7 @@ spec:
       labels:
         app: mecab
     spec: 
+      terminationGracePeriodSeconds : 10
       containers:
       - name: mecab
         image: "desg2022/04mecab:vs02"
@@ -102,7 +107,7 @@ kind: Deployment
 metadata:
   name: pndp
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: pn
@@ -111,6 +116,7 @@ spec:
       labels:
         app: pn
     spec: 
+      terminationGracePeriodSeconds : 10
       containers:
       - name: pn
         image: "desg2022/05pn:vs01"
@@ -123,7 +129,7 @@ kind: Deployment
 metadata:
   name: catdp
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: cat
@@ -132,6 +138,7 @@ spec:
       labels:
         app: cat
     spec:
+      terminationGracePeriodSeconds : 10
       containers:
       - name: cat
         image: "localhost:32000/07catlocal:vs01"
@@ -154,7 +161,7 @@ kind: Deployment
 metadata:
   name: postneralldp
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: postnerall
@@ -163,6 +170,7 @@ spec:
       labels:
         app: postnerall
     spec:
+      terminationGracePeriodSeconds : 30
       containers:
       - name: postnerall
         image: "localhost:32000/10postnerall1117:vs02"
