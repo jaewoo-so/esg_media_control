@@ -74,7 +74,7 @@ spec:
       terminationGracePeriodSeconds : 8
       containers:
       - name: insertdb
-        image: "localhost:32000/03insertdb:vs05"
+        image: "localhost:32000/03insertdb:vs06"
         env:
           - name: "PORT"
             value: "8003"
@@ -173,7 +173,7 @@ spec:
       terminationGracePeriodSeconds : 10
       containers:
       - name: postnerall
-        image: "localhost:32000/10postnerall1117:vs02"
+        image: "localhost:32000/10postnerall1117:vs04"
         imagePullPolicy: Always
         env:
           - name: "PORT"
