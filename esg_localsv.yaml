@@ -173,7 +173,7 @@ spec:
       terminationGracePeriodSeconds : 10
       containers:
       - name: postnerall
-        image: "desg2022/10postnerall1117:vs05"
+        image: "desg2022/10postnerall1117:vs06"
         imagePullPolicy: Always
         env:
           - name: "PORT"
