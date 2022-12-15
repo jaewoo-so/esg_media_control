@@ -84,6 +84,13 @@ spec:
         env:
           - name: "PORT"
             value: "8003"
+        volumeMounts:
+        - name: tz-seoul
+          mountPath: /etc/localtime
+      volumes:
+      - name: tz-seoul
+        hostPath: 
+          path: /usr/share/zoneinfo/Asia/Seoul
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -107,6 +114,7 @@ spec:
         env:
           - name: "PORT"
             value: "8004"
+
 ---
 apiVersion: apps/v1
 kind: Deployment
