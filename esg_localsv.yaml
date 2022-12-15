@@ -30,7 +30,13 @@ spec:
           failureThreshold: 2
           initialDelaySeconds: 3
           periodSeconds: 2
-          
+        volumeMounts:
+        - name: tz-seoul
+          mountPath: /etc/localtime
+      volumes:
+      - name: tz-seoul
+        hostPath: 
+          path: /usr/share/zoneinfo/Asia/Seoul
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -188,3 +194,10 @@ spec:
           failureThreshold: 2
           initialDelaySeconds: 3
           periodSeconds: 2
+        volumeMounts:
+        - name: tz-seoul
+          mountPath: /etc/localtime
+      volumes:
+      - name: tz-seoul
+        hostPath: 
+          path: /usr/share/zoneinfo/Asia/Seoul
