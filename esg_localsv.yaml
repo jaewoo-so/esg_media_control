@@ -25,7 +25,7 @@ spec:
             path: /
             port: 8001
             scheme: HTTP
-          timeoutSeconds: 3
+          timeoutSeconds: 30
           successThreshold: 1
           failureThreshold: 2
           initialDelaySeconds: 3
@@ -164,7 +164,7 @@ spec:
             path: /
             port: 8001
             scheme: HTTP
-          timeoutSeconds: 3
+          timeoutSeconds: 300
           successThreshold: 1
           failureThreshold: 2
           initialDelaySeconds: 3
@@ -197,7 +197,7 @@ spec:
             path: /
             port: 8010
             scheme: HTTP
-          timeoutSeconds: 3
+          timeoutSeconds: 3000
           successThreshold: 1
           failureThreshold: 2
           initialDelaySeconds: 3
