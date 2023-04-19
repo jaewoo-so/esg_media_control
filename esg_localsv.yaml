@@ -52,8 +52,7 @@ spec:
           requests:
             memory: "2048Mi"
             cpu: "4000m"
-        imagePullSecrets:	
-        - name: esg-hub
+
 
 ---
 apiVersion: apps/v1
@@ -107,8 +106,7 @@ spec:
           requests:
             memory: "2048Mi"
             cpu: "4000m"
-        imagePullSecrets:
-        - name: esg-hub
+
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -135,8 +133,7 @@ spec:
           requests:
             memory: "2048Mi"
             cpu: "4000m"
-        imagePullSecrets:
-        - name: esg-hub
+
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -192,5 +189,4 @@ spec:
           requests:
             memory: "12G"
             cpu: "16000m"
-        imagePullSecrets:
-        - name: esg-hub
+
