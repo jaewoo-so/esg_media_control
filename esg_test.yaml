@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: getdbdp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: getdb
+  template:
+    metadata:
+      labels:
+        app: getdb
+    spec:
+      terminationGracePeriodSeconds : 3
+      containers:
+      - name: getdb
+        image: "localhost:32000/01getdb:vs07"
+        imagePullPolicy: Always
+        env:
+          - name: "PORT"
+            value: "8001"
+        resources:
+          requests:
+            memory: "1024Mi"
+            cpu: "2000m"
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pre1dp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pre1
+
+  template:
+    metadata:
+      labels:
+        app: pre1
+    spec:
+      terminationGracePeriodSeconds : 3
+      containers:
+      - name: pre1
+        image: "desg2022/02pre1:vs01"
+        env:
+          - name: "PORT"
+            value: "8002"
+        resources:
+          requests:
+            memory: "2048Mi"
+            cpu: "4000m"
+
