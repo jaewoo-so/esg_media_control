@@ -52,4 +52,5 @@ spec:
           requests:
             memory: "2048Mi"
             cpu: "4000m"
-
+        imagePullSecrets:	
+        - name: esg-hub

@@ -65,7 +65,6 @@ spec:
   selector:
     matchLabels:
       app: insertdb
-
   template:
     metadata:
       labels:
@@ -92,7 +91,6 @@ spec:
   selector:
     matchLabels:
       app: mecab
-
   template:
     metadata:
       labels:
