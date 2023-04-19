@@ -51,7 +51,7 @@ spec:
         resources:
           requests:
             memory: "2048Mi"
-            cpu: "4000m"
+            cpu: "2000m"
 
 
 ---
@@ -79,7 +79,7 @@ spec:
         resources:
           requests:
             memory: "2048Mi"
-            cpu: "4000m"
+            cpu: "2000m"
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -105,7 +105,7 @@ spec:
         resources:
           requests:
             memory: "2048Mi"
-            cpu: "4000m"
+            cpu: "3000m"
 
 ---
 apiVersion: apps/v1
@@ -132,7 +132,7 @@ spec:
         resources:
           requests:
             memory: "2048Mi"
-            cpu: "4000m"
+            cpu: "3000m"
 
 ---
 apiVersion: apps/v1
@@ -158,8 +158,8 @@ spec:
             value: "8001"
         resources:
           requests:
-            memory: "8096Mi"
-            cpu: "8000m"
+            memory: "6084Mi"
+            cpu: "6000m"
 
        
 ---
@@ -188,5 +188,5 @@ spec:
         resources:
           requests:
             memory: "8096Mi"
-            cpu: "8000m"
+            cpu: "6000m"
 
