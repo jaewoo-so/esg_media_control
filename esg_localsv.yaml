@@ -187,6 +187,6 @@ spec:
             value: "8010"
         resources:
           requests:
-            memory: "8G"
+            memory: "8096Mi"
             cpu: "8000m"
 
