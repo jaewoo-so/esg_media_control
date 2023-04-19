@@ -20,6 +20,10 @@ spec:
         env:
           - name: "PORT"
             value: "8001"
+        resources:
+          requests:
+            memory: "1024Mi"
+            cpu: "2000m"
 
 ---
 apiVersion: apps/v1
@@ -44,6 +48,12 @@ spec:
         env:
           - name: "PORT"
             value: "8002"
+        resources:
+          requests:
+            memory: "2048Mi"
+            cpu: "4000m"
+        imagePullSecrets:	
+        - name: esg-hub
 
 ---
 apiVersion: apps/v1
@@ -68,6 +78,10 @@ spec:
         env:
           - name: "PORT"
             value: "8003"
+        resources:
+          requests:
+            memory: "2048Mi"
+            cpu: "4000m"
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -91,6 +105,12 @@ spec:
         env:
           - name: "PORT"
             value: "8004"
+        resources:
+          requests:
+            memory: "2048Mi"
+            cpu: "4000m"
+        imagePullSecrets:	
+        - name: esg-hub
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -113,6 +133,12 @@ spec:
         env:
           - name: "PORT"
             value: "8005"
+        resources:
+          requests:
+            memory: "2048Mi"
+            cpu: "4000m"
+        imagePullSecrets:	
+        - name: esg-hub
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -135,6 +161,11 @@ spec:
         env:
           - name: "PORT"
             value: "8001"
+        resources:
+          requests:
+            memory: "8096Mi"
+            cpu: "8000m"
+
        
 ---
 apiVersion: apps/v1
@@ -159,3 +190,9 @@ spec:
         env:
           - name: "PORT"
             value: "8010"
+        resources:
+          requests:
+            memory: "12G"
+            cpu: "16000m"
+        imagePullSecrets:	
+        - name: esg-hub
