@@ -23,7 +23,7 @@ spec:
         resources:
           requests:
             memory: "1024Mi"
-            cpu: "2000m"
+            cpu: "500m"
 
 ---
 apiVersion: apps/v1
@@ -51,7 +51,7 @@ spec:
         resources:
           requests:
             memory: "2048Mi"
-            cpu: "2000m"
+            cpu: "1000m"
 
 
 ---
@@ -79,7 +79,7 @@ spec:
         resources:
           requests:
             memory: "2048Mi"
-            cpu: "2000m"
+            cpu: "500m"
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -105,7 +105,7 @@ spec:
         resources:
           requests:
             memory: "2048Mi"
-            cpu: "3000m"
+            cpu: "2000m"
 
 ---
 apiVersion: apps/v1
@@ -132,7 +132,7 @@ spec:
         resources:
           requests:
             memory: "2048Mi"
-            cpu: "3000m"
+            cpu: "2000m"
 
 ---
 apiVersion: apps/v1
@@ -159,7 +159,7 @@ spec:
         resources:
           requests:
             memory: "6084Mi"
-            cpu: "6000m"
+            cpu: "3000m"
 
        
 ---
@@ -180,13 +180,12 @@ spec:
       terminationGracePeriodSeconds : 10
       containers:
       - name: postnerall
-        image: "desg2022/10postnerall1214:vs07"
+        image: "desg2022/10postnerall0427:v01"
         imagePullPolicy: Always
         env:
           - name: "PORT"
             value: "8010"
         resources:
           requests:
-            memory: "8096Mi"
-            cpu: "6000m"
-
+            memory: "6084Mi"
+            cpu: "3000m
