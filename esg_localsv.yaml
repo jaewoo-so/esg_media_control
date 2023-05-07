@@ -25,6 +25,7 @@ spec:
             memory: "1024Mi"
             cpu: "500m"
 
+
 ---
 apiVersion: apps/v1
 kind: Deployment
