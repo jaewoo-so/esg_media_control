@@ -149,6 +149,7 @@ spec:
       containers:
       - name: cat
         image: "localhost:32000/07catlocal:vs01"
+        imagePullPolicy: Always ...
         env:
           - name: "PORT"
             value: "8001"
@@ -175,7 +176,7 @@ spec:
       terminationGracePeriodSeconds : 10
       containers:
       - name: postnerall
-        image: "desg2022/10postnerall0427:v01"
+        image: "localhost:32000/10postnerall0427:v01"
         imagePullPolicy: Always
         env:
           - name: "PORT"
