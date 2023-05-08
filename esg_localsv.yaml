@@ -149,7 +149,7 @@ spec:
       containers:
       - name: cat
         image: "localhost:32000/07catlocal:vs01"
-        imagePullPolicy: Always ...
+        imagePullPolicy: Always
         env:
           - name: "PORT"
             value: "8001"
